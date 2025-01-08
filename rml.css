@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
-    background-color: #000;
+    background-color: #ffffff;
   }
   
   /* Navbar */
@@ -22,7 +22,7 @@ body, html {
   }
   
   .navbar-dark .nav-link:hover {
-    color: #0097a1;
+    color: #00adb9;
   }
   
   .navbar-dark .btn {
@@ -62,11 +62,7 @@ body, html {
   /* Hero Section */
   .hero {
     height: 100vh;
-    background: url("https://cdn.create.vista.com/api/media/medium/557317300/stock-photo-sky-night-stars-moon-islamic-night?token=") 
-;filter:0.3;
-    background-repeat: no-repeat;
-    background-position: center center/cover;
-
+    background: url("https://cdn.create.vista.com/api/media/medium/557317300/stock-photo-sky-night-stars-moon-islamic-night?token=") no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,5 +128,12 @@ body, html {
 
 
 
+section, main{
 
-
+  padding: 50px;
+  padding-top: 150px;
+}
+p{
+  line-height: 30px;
+  letter-spacing: 2px;
+}
