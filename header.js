@@ -1,6 +1,8 @@
+
+
 let header = `
- <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">RML</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
@@ -14,6 +16,23 @@ let header = `
           <li class="nav-item"><a class="nav-link ripple" href="#contact">Contact</a></li>
         </ul>
         <button class="btn btn-danger ripple">Donate</button>
+
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" to='/rml' >Home</a></li>
+    <li><a class="dropdown-item" to='/quran'>Qur'an</a></li>
+    <li><a class="dropdown-item" to='/thouheed' href="#">Thouheed</a></li>
+    <li><a class="dropdown-item" to='/about' href="#">About</a></li>
+  </ul>
+</div>
+
+
+
+
       </div>
     </div>
   </nav>
@@ -33,13 +52,6 @@ let header = `
       </ul>
     </div>
   </div>
-
-
-`;
-
+`
 
 document.querySelector("#header").innerHTML = header;
-
-let footer = `
-
-`
