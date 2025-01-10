@@ -23,10 +23,10 @@ let header = `
     Dropdown button
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" to='/rml' >Home</a></li>
-    <li><a class="dropdown-item" to='/quran'>Qur'an</a></li>
-    <li><a class="dropdown-item" to='/thouheed' href="#">Thouheed</a></li>
-    <li><a class="dropdown-item" to='/about' href="#">About</a></li>
+    <li><a class="dropdown-item" href=' home.html' to='/rml' >Home</a></li>
+    <li><a class="dropdown-item" href=' quran.html' to='/quran'>Qur'an</a></li>
+    <li><a class="dropdown-item" href=' thouheed.html' to='/thouheed' href="#">Thouheed</a></li>
+    <li><a class="dropdown-item" href=' about.html' to='/about' href="#">About</a></li>
   </ul>
 </div>
 
@@ -45,10 +45,10 @@ let header = `
     </div>
     <div class="offcanvas-body">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link ripple" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link ripple" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link ripple" href="#causes">Causes</a></li>
-        <li class="nav-item"><a class="nav-link ripple" href="#contact">Contact</a></li>
+    <li><a class="nav-item" href=' home.html' to='/rml' >Home</a></li>
+    <li><a class="nav-item" href=' quran.html' to='/quran'>Qur'an</a></li>
+    <li><a class="nav-item" href=' thouheed.html' to='/thouheed' href="#">Thouheed</a></li>
+    <li><a class="nav-item" href=' about.html' to='/about' href="#">About</a></li>
       </ul>
     </div>
   </div>
