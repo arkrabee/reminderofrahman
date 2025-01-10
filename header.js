@@ -15,20 +15,10 @@ let header = `
           <li class="nav-item"><a class="nav-link ripple" href="#causes">Causes</a></li>
           <li class="nav-item"><a class="nav-link ripple" href="#contact">Contact</a></li>
         </ul>
-        <button class="btn btn-danger ripple">Donate</button>
+        
 
 
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href=' home.html' to='/rml' >Home</a></li>
-    <li><a class="dropdown-item" href=' quran.html' to='/quran'>Qur'an</a></li>
-    <li><a class="dropdown-item" href=' thouheed.html' to='/thouheed' href="#">Thouheed</a></li>
-    <li><a class="dropdown-item" href=' about.html' to='/about' href="#">About</a></li>
-  </ul>
-</div>
+
 
 
 
