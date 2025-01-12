@@ -1,82 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reminder of Rahman</title>
-  <link rel="stylesheet" href="../rml.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
- 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reminder of Rahman</title>
+    <link rel="stylesheet" href="../rml.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div id="header"></div>
 
-<div id="header"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Reminder of Rahman</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link ripple" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ripple" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ripple" href="#causes">Causes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ripple" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <button class="btn btn-danger ripple">Donate</button>
+        </div>
+      </div>
+    </nav>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container"  >
-    <a class="navbar-brand" href="#">Reminder of Rahman</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link ripple" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link ripple" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link ripple" href="#causes">Causes</a></li>
-        <li class="nav-item"><a class="nav-link ripple" href="#contact">Contact</a></li>
-      </ul>
-      <button class="btn btn-danger ripple">Donate</button>
+    <!-- Offcanvas Menu for Mobile -->
+    <div class="offcanvas offcanvas-end" style="width: 40%" id="offcanvasMenu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link ripple" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ripple" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ripple" href="#causes">Causes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ripple" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
 
-<!-- Offcanvas Menu for Mobile -->
-<div class="offcanvas offcanvas-end" style="width: 40%;" id="offcanvasMenu">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title">Menu</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-  </div>
-  <div class="offcanvas-body">
-    <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link ripple" href="#home">Home</a></li>
-      <li class="nav-item"><a class="nav-link ripple" href="#about">About</a></li>
-      <li class="nav-item"><a class="nav-link ripple" href="#causes">Causes</a></li>
-      <li class="nav-item"><a class="nav-link ripple" href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</div>
+    <main class="container-fluid mt-5 pt-5">
+    
 
-  <!-- Hero Section -->
-  <section class="hero d-flex" style="flex-direction: column;">
-    <div class="container text-center text-white">
-      <h1>Reminder of Rahman</h1>
-      <div class="hero-buttons">
-        <button class="btn btn-danger ripple" to="/about">About</button>
-        <button class="btn btn-light ripple">How We Work</button>
+      <div class="row folders">
+        <div class="col-4">
+          Essay
+        </div>
+        <div class="col-4">
+          Qur'an
+        </div>
+        <div class="col-4">
+          Story
+        </div>
+        <div class="col-4">
+          Song
+        </div>
+        <div class="col-4">
+          Event
+        </div>
+        <div class="col-4">
+          About Us
+        </div>
       </div>
 
-    </div>
-    <div class="container folder-container" style="align-items: center; justify-content: center;">
-   <div class="row folder-row">
-     <div class="col-12">
-        <svg xmlns="http://www.w3.org/2000/svg" class="folder" viewBox="0 0 512 512"><path class="folder-path" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" class="folder" viewBox="0 0 512 512"><path class="folder-path" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" class="folder" viewBox="0 0 512 512"><path class="folder-path" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"/></svg>
-     </div>
-     <div class="col-12">
-            <svg xmlns="http://www.w3.org/2000/svg" class="folder" viewBox="0 0 512 512"><path class="folder-path" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" class="folder" viewBox="0 0 512 512"><path class="folder-path" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" class="folder" viewBox="0 0 512 512"><path class="folder-path" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"/></svg>
-     </div>
-   </div>
-    </div>
-  </section>
 
+    </main>
 
+    <div id="footer"></div>
 
-  <div id="footer"></div>
-
-  <script src="../load.js"></script>
-</body>
+    <script src="../load.js"></script>
+  </body>
 </html>
