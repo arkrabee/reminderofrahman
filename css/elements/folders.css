@@ -1,0 +1,70 @@
+.folders {
+    align-items: center;
+    justify-content: center;
+}
+.folders div {
+    background: url(
+        https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_640.jpg
+    ) ;
+    padding: 30px;
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    transition: 0.2s;
+    border-radius: 5px;
+    color: white;
+}
+.folders div:hover {
+    border-radius: 9px;
+    background-color: rgb(143, 94, 22);
+    transform: scale(1.04);
+
+}
+
+@media screen and (max-width: 900px){
+    .folders div {
+        font-size: 15px;
+        margin: 6px;
+        padding: 20px;
+    }
+    .search-controller {
+        width: 100% !important;
+    }
+   
+    
+
+}
+
+hr {
+    border:1px solid rgba(65, 65, 65, 0.61);
+}
+
+
+.quran-shower {
+    font-family: arabic-bold;
+}
+.quran-shower .title {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.ayat {
+    padding: 20px 0;
+    font-family: arabic-bold;
+    font-size: 40px;
+    color: rgb(255, 196, 0);
+}
+.ayat-malayalam {
+    padding: 20px 0;
+    color: rgb(212, 114, 114);
+    text-shadow: 1px 2px 1px rgb(255, 234, 234);
+}
+
+.space {
+    line-height: 30px;
+    letter-spacing: 2px;
+}
