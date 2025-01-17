@@ -2,9 +2,13 @@ let links = [
   ["Home", "home"],
   ["About Us", "aboutus"],
   ["Feedback", "feedback"],
+
 ]
 
-
+let ilmLinks = [
+  ["Qur'an", "quran"],
+  ["",""],
+]
 
 let navLinks = ""
 
@@ -32,7 +36,12 @@ for(let s = 0; s < links.length; s++){
 let header = `
 <div class="container-fluid banner-rml" >
     <div class="row p-5 bg-secondary text-center fs-large text-white">
-      <h1>${det.name}</h1>
+      <h1>
+      <img src="../assets/images/rml.png" class="img-fluid" alt="">
+      </h1>
+      <p>
+      <img src="https://yt3.googleusercontent.com/r35Vx2xo6Pv-FeaKONcZX5hLdVHDpR9rzlG0tq0C7mEe-g8uCM01J-Ezm7FmWe_gGbgCUTpJjA=s160-c-k-c0x00ffffff-no-rj" alt="">
+      </p>
     </div>
   </div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -70,7 +79,7 @@ let header = `
             ${navLinks}
 <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+              Categories
             </a>
             <ul class="dropdown-menu">
               ${dropdownLinks}
@@ -83,14 +92,7 @@ let header = `
 
   </div>
 </div>
-`
-
-
-
-
-
-
-
+`;
 
 
 
@@ -108,15 +110,19 @@ let header = `
 
 document.querySelector("#header").innerHTML = header
 
+document.querySelector("#rml-404-page-another-pages").innerHTML = 
+`
 
-// let x = matchMedia("(min-width: 900px)")
 
 
-// x.addEventListener("change", function() {
-//   if(x.matches){
-//   document.querySelector(".banner-rml").style.display = "block"
-// }else {
-//   document.querySelector(".banner-rml").style.display = "none"
 
-// }
-// });
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Another Pages
+  </button>
+  <ul class="dropdown-menu">
+    ${dropdownLinks}
+  </ul>
+</div>
+  
+`;

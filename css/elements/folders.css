@@ -4,15 +4,16 @@
 }
 .folders div {
     background: url(
-        https://cdn.pixabay.com/photo/2015/04/23/22/00/new-year-background-736885_640.jpg
-    ) ;
+        ../../assets/images/B.png
+    ) no-repeat center;
     padding: 30px;
     text-align: center;
     margin: 10px;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: 900;
     transition: 0.2s;
     border-radius: 5px;
+    text-transform: uppercase;
     color: white;
 }
 .folders div:hover {
@@ -42,7 +43,13 @@ hr {
 
 
 .quran-shower {
-    font-family: arabic-bold;
+    font-family: arabic-bold; 
+   background-image: url(../../assets/images/ay.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto auto;
+    height: 200px;
+
 }
 .quran-shower .title {
     margin-top: 30px;

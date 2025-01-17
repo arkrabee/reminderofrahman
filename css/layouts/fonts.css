@@ -13,3 +13,13 @@
 .arabic-bold {
     font-family: arabic-bld;
 }
+
+
+@font-face {
+    font-family: anek;
+    src: url(../../assets/fonts/mallu/AnekMalayalam_SemiExpanded-Medium.ttf);
+}
+.anek {
+    font-family: anek;
+    font-size: 21px;
+}

@@ -2,9 +2,11 @@
 const resources = {
     css: [
         "elements/loading.css",
+        "elements/search.css",
         "layouts/fonts.css",
         "layouts/header.css",
         "elements/folders.css",
+        "elements/script.css",
 
 
 
@@ -15,7 +17,9 @@ const resources = {
         "scripts/script_1.js",
         "layouts/header.js",
         "layouts/footer.js",
-
+        "scripts/script_2.js",
+        "scripts/search_controller.js",
+        "elements/favicon.js",
     ]
 };
 
