@@ -23,14 +23,29 @@
 
   </div>
 
-  <main class="container-fluid search-main mt-5 pt-5">
+  <main class="container-fluid search-main mt-2">
     <div class="row">
       <div class="col-12">
         <div class="aligner" style="display: flex; justify-content: center;">
-          <form class="d-flex search-controller" role="search" style="width: 50%;">
+          <!-- <form class="d-flex search-controller" role="search" style="width: 50%;">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+
+          <form class="d-flex search-controller position-relative" role="search" style="width: 50%;">
+            <input
+              id="search-input"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              oninput="showSuggestions(this.value)"
+              autocomplete="off"
+            >
+            <button class="btn btn-outline-success" type="submit">Search</button>
+            <div id="suggestions" class="suggestions"></div>
           </form>
+
         </div>
         <hr class="my-5">
         <div class="row folders">
