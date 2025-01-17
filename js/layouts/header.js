@@ -35,13 +35,13 @@ for(let s = 0; s < links.length; s++){
 
 let header = `
 <div class="container-fluid banner-rml" >
-    <div class="row p-5 bg-secondary text-center fs-large text-white">
-      <h1>
-      <img src="../assets/images/rml.png" class="img-fluid" alt="">
-      </h1>
-      <p>
-      <img src="https://yt3.googleusercontent.com/r35Vx2xo6Pv-FeaKONcZX5hLdVHDpR9rzlG0tq0C7mEe-g8uCM01J-Ezm7FmWe_gGbgCUTpJjA=s160-c-k-c0x00ffffff-no-rj" alt="">
-      </p>
+    <div class="row p-5 bg-secondary text-center fs-large text-white" style='flex-direction: row;'>
+      <div>
+      <img src="../assets/images/rml.png"  class="img-fluid" alt="">
+      </div>
+      <div>
+      <img width='100' height='100' src="https://yt3.googleusercontent.com/r35Vx2xo6Pv-FeaKONcZX5hLdVHDpR9rzlG0tq0C7mEe-g8uCM01J-Ezm7FmWe_gGbgCUTpJjA=s160-c-k-c0x00ffffff-no-rj" alt="">
+      </div>
     </div>
   </div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
