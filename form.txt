@@ -1,0 +1,56 @@
+ <section class="feedback-section">
+    <div class="feedback-form">
+      <h2>Feedback Form</h2>
+      <form class="needs-validation" novalidate action="https://script.google.com/macros/s/xrbbvlqlw/exec"
+        method="POST">
+        <!-- Rating -->
+        <div class="mb-3">
+          <label class="form-label">Rate Your Experience</label>
+          <div class="rating-group">
+            <input type="radio" id="star1" name="rating" value="1" required>
+            <label for="star1">★</label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">★</label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3">★</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">★</label>
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5">★</label>
+          </div>
+          <div class="invalid-feedback">
+            Please select a rating.
+          </div>
+        </div>
+        <!-- Feedback Type -->
+        <div class="mb-3">
+          <label for="feedbackType" class="form-label">Feedback Type</label>
+          <select class="form-select" name="Feedback Type" id="feedbackType" required>
+            <option value="" selected disabled>Select a type</option>
+            <option value="suggestion">Suggestion</option>
+            <option value="question">Question</option>
+            <option value="complaint">Complaint</option>
+
+          </select>
+          <div class="invalid-feedback">
+            Please select a feedback type.
+          </div>
+        </div>
+        <!-- Detailed Feedback -->
+        <div class="mb-3">
+          <label for="feedbackMessage" class="form-label">Your Feedback</label>
+          <textarea class="form-control" name="User Feedback" id="feedbackMessage" rows="4"
+            placeholder="Write your feedback..." required></textarea>
+          <div class="invalid-feedback">
+            Feedback cannot be empty.
+          </div>
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-submit w-100">Submit Feedback</button>
+        <!-- Footer -->
+        <div class="form-footer mt-3">
+          <p>Need help? <a href="https://mail.google.com/mail/u/0/#search/reminterofrahman%40gmail.com?compose=new">Contact Support</a></p>
+        </div>
+      </form>
+    </div>
+  </section>

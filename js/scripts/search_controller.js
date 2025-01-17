@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+
 const data = [
     { name: "home", link: "home.html" },
     { name: "about", link: "about.html" },
@@ -71,3 +81,33 @@ const data = [
       suggestionsBox.style.width = `${rect.width}px`;
     }
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
