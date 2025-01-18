@@ -1,150 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background: linear-gradient(135deg, #e0f7fa, #fce4ec);
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .feedback-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    .feedback-form {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      padding: 40px;
-      width: 100%;
-      max-width: 600px;
-    }
-
-    .feedback-form h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    .form-control {
-      border-radius: 8px;
-      border: 1px solid #ced4da;
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
-
-    .form-control:focus {
-      border-color: #00bcd4;
-      box-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
-    }
-
-    .btn-submit {
-      background: #00bcd4;
-      color: #fff;
-      border-radius: 8px;
-      transition: background 0.3s, transform 0.2s;
-    }
-
-    .btn-submit:hover {
-      background: #008ba3;
-      transform: scale(1.05);
-    }
-
-    .rating-group {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 15px;
-    }
-
-    .rating-group label {
-      font-size: 1.5rem;
-      color: #ff9800;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .rating-group input[type="radio"] {
-      display: none;
-    }
-
-    .rating-group input[type="radio"]:checked+label {
-      transform: scale(1.2);
-      color: #ff5722;
-    }
-
-    .form-footer {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 0.9rem;
-    }
-
-    .form-footer a {
-      color: #00bcd4;
-      text-decoration: none;
-    }
-
-    .form-footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        .clearfix {
+            display: flex;
+            justify-content: space-between;
+        }
+        .cancelbtn, .signupbtn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .cancelbtn {
+            background-color: #f44336;
+            color: white;
+        }
+        .signupbtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .loading img {
+            width: 30px;
+        }
+    </style>
 </head>
-
 <body>
+    <form action="https://sheetdb.io/api/v1/t5flzhx9kfoj2" method="post" id="sheetdb-form">
+        <div class="container">
+          <h1>Feedback Form</h1>
+          <p>Please fill in this form to send feedback.</p>
+          <hr>
+      
+          <label for="name"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="data[name]" required>
+      
+          <label for="place"><b>Place</b></label>
+          <input type="text" placeholder="Enter Place" name="data[place]" required>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="email" placeholder="Enter Email" name="data[email]" required>
+
+          <label for="phone"><b>Phone</b></label>
+          <input type="tel" placeholder="Enter Phone number" name="data[phone]" required pattern="\d{10}" title="Please enter exactly 10 digits">
+
+          <label for="whatsapp"><b>WhatsApp Number</b></label>
+          <input type="tel" placeholder="Enter WhatsApp Number" name="data[whatsapp]" required pattern="\d{10}" title="Please enter exactly 10 digits">
+
+          <label for="feedback"><b>Feedback</b></label>
+          <textarea placeholder="Type Your Feedback" name="data[feedback]" required></textarea>
+      
+          <div class="clearfix">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Submit</button>
+          </div>
+
+          <div class="loading" id="loading">
+            <img src="https://i.gifer.com/ZZ5H.gif" alt="Loading...">
+            <p>Submitting your feedback...</p>
+          </div>
+        </div>
+      </form>
+
+      <script>
+          const form = document.getElementById('sheetdb-form');
+          const loading = document.getElementById('loading');
+
+          form.addEventListener("submit", e => {
+              e.preventDefault();
 
 
-
-  <form method="POST" action="https://script.google.com/macros/s/xrbbvlqlw/exec">
-    <div class="mb-3" >
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" name="label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Bootstrap Validation Script
-    (function () {
-      'use strict';
-      const forms = document.querySelectorAll('.needs-validation');
-      Array.from(forms).forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    })();
+              loading.style.display = 'block';
 
 
-
-
-
-
-
-
-  </script>
+              setTimeout(() => {
+                  fetch(form.action, {
+                      method: "POST",
+                      body: new FormData(form),
+                  }).then(
+                      response => response.json()
+                  ).then((html) => {
+                      alert('Feedback submitted successfully!');
+                      form.reset(); 
+                  }).finally(() => {
+                      loading.style.display = 'none'; 
+                  });
+              }, 3000);
+          });
+      </script>
 </body>
-
 </html>
