@@ -15,7 +15,7 @@
     text-transform: uppercase;
     color: white;
     min-height: 3rem;
-    width: 3rem;
+    min-width: 3rem;
     line-height: 3rem;
 }
 .folders div:hover {

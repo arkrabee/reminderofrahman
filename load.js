@@ -12,10 +12,12 @@ const resources = {
 
     ],
     js: [
+        "library/jquery.js",
         "scripts/script.js",
         "elements/loading.js",
         "scripts/script_1.js",
         "../workspace/links.js",
+        "elements/essays.js",
         "layouts/header.js",
         "layouts/header-balance.js",
         "layouts/footer.js",
