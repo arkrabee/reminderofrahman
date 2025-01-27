@@ -6,7 +6,6 @@
     background: url(
         ../../assets/images/B2.png
     ) no-repeat center;
-    padding: 30px;
     text-align: center;
     margin: 10px;
     font-size: 30px;
@@ -15,6 +14,9 @@
     border-radius: 5px;
     text-transform: uppercase;
     color: white;
+    min-height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
 }
 .folders div:hover {
     border-radius: 9px;
@@ -27,7 +29,6 @@
     .folders div {
         font-size: 15px;
         margin: 6px;
-        padding: 20px;
     }
     .search-controller {
         width: 100% !important;
@@ -80,4 +81,23 @@ hr {
 
 .nav-banner {
     background: url('../../assets/images/bg.avif') no-repeat center center/cover;
+}
+
+
+.marginer {
+    padding: 0 40px;
+}
+
+@media sreen and (max-width: 900px) {
+    .marginer {
+        padding: 0;
+    }
+    
+}
+
+
+
+.wantmargin {
+    margin: 7px 0;
+    padding: 0;
 }

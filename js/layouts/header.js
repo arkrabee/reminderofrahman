@@ -1,11 +1,3 @@
-let links = [
- ["Essay", "essay"]
-]
-
-let ilmLinks = [
-  ["Qur'an", "quran"],
-  ["",""],
-]
 
 let navLinks = ""
 
