@@ -1,113 +1,69 @@
-
-
-
-
-
-
-
-
-
-
-const data = [
-    { name: "home", link: "home.html" },
-    { name: "about", link: "about.html" },
-    { name: "aboutus", link: "aboutus.html" },
-    { name: "feedback", link: "feedback.html" },
-    { name: "സയ്യിദ് സനാ ഉല്ലാ മക്തി തങ്ങൾ", link: "sayyid_sana_ulla_makthi_thangal.html" },
-
-  ];
-
-  function showSuggestions(query) {
-    const suggestionsBox = document.getElementById('suggestions');
-    const searchInput = document.getElementById('search-input');
+   
+   
+   
+   
+   
+   
+   
+   // Sample data (replace with your actual content and links)
+const searchData = [
     
-    suggestionsBox.innerHTML = ""; // Clear previous suggestions
 
-    if (query.trim() === "") {
-      return; // If the query is empty, do nothing
+];
+
+// Get elements
+const searchBar = document.getElementById("search-bar");
+const suggestionsBox = document.getElementById("suggestions");
+
+// Function to display suggestions
+function showSuggestions(filteredData) {
+    if (filteredData.length === 0) {
+        suggestionsBox.style.display = "none";
+        return;
     }
 
-    // Get the position and size of the input field
-    const rect = searchInput.getBoundingClientRect();
-    suggestionsBox.style.top = `${rect.bottom + window.scrollY}px`;
-    suggestionsBox.style.left = `${rect.left + window.scrollX}px`;
-    suggestionsBox.style.width = `${rect.width}px`;
+    // Sort suggestions alphabetically
+    filteredData.sort((a, b) => a.title.localeCompare(b.title));
 
-    const filteredData = data.filter(item =>
-      item.name.toLowerCase().includes(query.toLowerCase())
+    // Create suggestion items
+    const suggestionsHTML = filteredData
+        .map(
+            (item) =>
+                `<div class="suggestion-item" data-link="${item.link}">${item.title}</div>`
+        )
+        .join("");
+
+    // Display suggestions
+    suggestionsBox.innerHTML = suggestionsHTML;
+    suggestionsBox.style.display = "block";
+}
+
+// Event listener for search input
+searchBar.addEventListener("input", function () {
+    const searchTerm = this.value.toLowerCase();
+    const filteredData = searchData.filter((item) =>
+        item.title.toLowerCase().includes(searchTerm)
     );
+    showSuggestions(filteredData);
+});
 
-    if (filteredData.length > 0) {
-      filteredData.forEach(item => {
-        const suggestionItem = document.createElement('a');
-        suggestionItem.href = item.link;
-        suggestionItem.textContent = item.name;
-        suggestionsBox.appendChild(suggestionItem);
-      });
-    } else {
-      const noResultItem = document.createElement('div');
-      noResultItem.textContent = "No results found";
-      noResultItem.style.padding = "10px";
-      noResultItem.style.color = "#666";
-      suggestionsBox.appendChild(noResultItem);
+// Event listener for clicking a suggestion
+suggestionsBox.addEventListener("click", function (e) {
+    if (e.target.classList.contains("suggestion-item")) {
+        const link = e.target.getAttribute("data-link");
+        window.location.href = link; // Redirect to the selected link
     }
-  }
+});
 
-  // Hide suggestions when clicking outside
-  document.addEventListener('click', (event) => {
-    if (!event.target.closest('.search-controller')) {
-      document.getElementById('suggestions').innerHTML = "";
+// Hide suggestions when clicking outside
+document.addEventListener("click", function (e) {
+    if (!e.target.closest(".search-container")) {
+        suggestionsBox.style.display = "none";
     }
-  });
-
-  // Adjust position of suggestions on scroll or resize
-  window.addEventListener('scroll', () => {
-    const searchInput = document.getElementById('search-input');
-    const suggestionsBox = document.getElementById('suggestions');
-    if (searchInput.value.trim() !== "") {
-      const rect = searchInput.getBoundingClientRect();
-      suggestionsBox.style.top = `${rect.bottom + window.scrollY}px`;
-      suggestionsBox.style.left = `${rect.left + window.scrollX}px`;
-    }
-  });
-
-  window.addEventListener('resize', () => {
-    const searchInput = document.getElementById('search-input');
-    const suggestionsBox = document.getElementById('suggestions');
-    if (searchInput.value.trim() !== "") {
-      const rect = searchInput.getBoundingClientRect();
-      suggestionsBox.style.top = `${rect.bottom + window.scrollY}px`;
-      suggestionsBox.style.left = `${rect.left + window.scrollX}px`;
-      suggestionsBox.style.width = `${rect.width}px`;
-    }
-  });
+});
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function addSdata(title, link) {
+    searchData.push({ title, link });
+}
 

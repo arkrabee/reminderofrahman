@@ -50,6 +50,10 @@ let header = `
     </div>
   </nav>
 
+<div class="search-container">
+    <input type="text" id="search-bar" placeholder="Search..." />
+    <div id="suggestions"></div>
+</div>
 
 
   <div class="row">

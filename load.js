@@ -23,7 +23,8 @@ const resources = {
         "layouts/footer.js",
         "scripts/script_2.js",
         "scripts/search_controller.js",
-        "elements/favicon.js",
+        "scripts/favicon.js",
+        "scripts/search_data.js"
     ]
 };
 

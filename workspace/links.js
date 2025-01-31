@@ -17,5 +17,6 @@ let essayFolders = [
     name: "വിശുദ്ധ ഖുർആന്‍ പാരായണത്തിന്റെ ശ്രേഷ്ടതകള്‍",
     root: "quran-parayanam",
   },
+  
  
 ]
