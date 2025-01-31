@@ -6,10 +6,7 @@
    
    
    // Sample data (replace with your actual content and links)
-const searchData = [
-    
-
-];
+const searchData = [];
 
 // Get elements
 const searchBar = document.getElementById("search-bar");
@@ -18,7 +15,9 @@ const suggestionsBox = document.getElementById("suggestions");
 // Function to display suggestions
 function showSuggestions(filteredData) {
     if (filteredData.length === 0) {
-        suggestionsBox.style.display = "none";
+        // If no results, show "No Result found" message
+        suggestionsBox.innerHTML = `<div class="suggestion-item no-result"> ക്ഷമിക്കണം, നിങ്ങൾ തിരഞ്ഞ "${searchBar.value}"  ന്റെ ഫലം ഇല്ല.</div>`;
+        suggestionsBox.style.display = "block";
         return;
     }
 
@@ -41,9 +40,19 @@ function showSuggestions(filteredData) {
 // Event listener for search input
 searchBar.addEventListener("input", function () {
     const searchTerm = this.value.toLowerCase();
+
+    // Hide suggestions if search input is empty
+    if (searchTerm === "") {
+        suggestionsBox.style.display = "none";
+        return;
+    }
+
+    // Filter searchData based on search term
     const filteredData = searchData.filter((item) =>
         item.title.toLowerCase().includes(searchTerm)
     );
+
+    // Show suggestions or "No Result found" message
     showSuggestions(filteredData);
 });
 

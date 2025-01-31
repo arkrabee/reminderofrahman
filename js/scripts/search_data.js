@@ -16,7 +16,7 @@ for(let i = 0; i < essayFolders.length; i++){
 
 
 for(let i = 0; i < links.length; i++){
-    addSdata(links[i][0], links[i][1])
+    addSdata(links[i][0], links[i][1]+".html")
 
 }
 

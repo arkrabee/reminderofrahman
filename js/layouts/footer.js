@@ -11,7 +11,7 @@ let footer = `
       </a>
   
       <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href='home.html' class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href='index.html' class="nav-link px-2 text-muted">Home</a></li>
         <li class="nav-item"><a href='feedback.html' class="nav-link px-2 text-muted">Feedback</a></li>
         <li class="nav-item"><a href='instragram.com' class="nav-link px-2 text-muted">Instagram</a></li>
         <li class="nav-item"><a href='facebook.com' class="nav-link px-2 text-muted">Facebook</a></li>

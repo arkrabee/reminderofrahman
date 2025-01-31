@@ -51,7 +51,7 @@ let header = `
   </nav>
 
 <div class="search-container">
-    <input type="text" id="search-bar" placeholder="Search..." />
+    <input type="text" id="search-bar" autocomplete="off" placeholder="Search..." />
     <div id="suggestions"></div>
 </div>
 
@@ -98,7 +98,7 @@ let header = `
 
     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-    <a class="nav-link ripple" href="home.html">Home</a>
+    <a class="nav-link ripple" href="index.html">Home</a>
   </li>
 
 <li class="nav-item">

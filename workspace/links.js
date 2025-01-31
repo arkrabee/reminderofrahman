@@ -1,5 +1,14 @@
+
+
+
+
 let links = [
   ["Essay", "essay"],
+  ["Qur'an", "quran"],
+  ["Event", "event"],
+  ["Story", "story"],
+  ["Song", "song"],
+  ["Thajweed", "thajweed"],
 ];
 
 
